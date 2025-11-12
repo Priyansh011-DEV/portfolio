@@ -1,0 +1,63 @@
+/* Simple, easy-to-edit styles for your portfolio */
+:root{
+  --max-width: 900px;
+  --accent: #2b6cb0;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; color:#fffbfb; background-image: url('BG.jpeg');}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.site-header{background:#ffffff;border-bottom:1px solid #000000;position:sticky;top:0;z-index:10; transition: opacity 0.5s ease-out;}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.main-nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+.main-nav a:hover{color:var(--accent)}
+
+.hero{padding:48px 24px;text-align:center}
+.hero h2{font-size:28px;margin:0 0 8px}
+.tagline{color:var(--muted);margin:0 0 16px}
+.btn{display:inline-block;padding:10px 16px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
+
+section{padding:20px 0;border-bottom:1px solid #f3f4f6}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+
+.project{background:#ffffff;padding:16px;border-radius:8px;border:1px solid #ffffff}
+.project h4{margin:0 0 8px}
+.project p{color:var(--muted);margin:0 0 12px}
+.project-link{font-weight:600;color:var(--accent);text-decoration:none}
+
+.footer{padding:18px 24px;text-align:center;color:var(--muted);font-size:14px}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  .header-inner{flex-direction:column;gap:12px}
+  .hero h2{font-size:22px}
+}
+#site-name {
+  color: black;
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+.fade-on-scroll {
+  opacity: 1;                       /* fully visible by default */
+  transition: opacity 0.5s ease-out; /* smooth fade effect */
+}
+.project:hover {
+  transform: translateY(-10px) scale(1.03); /* lifts up + slight zoom */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);   /* stronger shadow */
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; /* spacing between cards */
+  margin-top: 20px;
+}
+.project {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem; /* slightly smaller text */
+}
